@@ -70,8 +70,6 @@ function web21(name){
 const web21students = new web21("Dan");
 const random_class = new web21("Lous Williams");
 
-web21students.join();
-random_class.join();
 
 web21students.join.apply(random_class);
 random_class.join.call(web21students);
