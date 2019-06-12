@@ -115,6 +115,32 @@ console.log(mage.takeDamage()); // Bruce took damage.
 console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
 
   // Stretch task: 
+
+
+function Villain(bad){
+  GameObject.call(this, bad);
+  CharacterStats.call(this, bad);
+  Humanoid.call(this, bad)
+};
+
+Villain.prototype= Object.create(GameObject.prototype);
+Villain.prototype= Object.create(CharacterStats.prototype);
+Villain.prototype= Object.create(Humanoid.prototype);
+
+
+
+
+function Hero(good){
+  GameObject.call(this, good);
+  CharacterStats.call(this, good);
+  Humanoid.call(this, good);
+};
+
+Hero.prototype= Object.create(GameObject.prototype);
+Hero.prototype= Object.create(CharacterStats.prototype);
+Hero.prototype= Object.create(Humanoid.prototype);
+
+
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
